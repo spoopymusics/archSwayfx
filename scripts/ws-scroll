@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+ACTION="$1"  # focus | movefocus
+
+# Get focused output name
+OUTPUT=$(swaymsg -t get_outputs -r | jq -r '.[] | select(.focused==true).name')
+
+# Get highest workspace index on this output
+MAX=$(swaymsg -t get_workspaces -r \
+    | jq -r --arg out "$OUTPUT" '
+        [.[] | select(.output==$out)
+              | .name
+              | capture("ws-(?<n>[0-9]+)")?.n // 0]
+        | max')
+
+NEXT=$((MAX + 1))
+WS_NAME="${OUTPUT}:ws-${NEXT}"
+
+case "$ACTION" in
+    focus)
+        swaymsg "workspace $WS_NAME"
+        ;;
+    movefocus)
+        swaymsg "move container to workspace $WS_NAME"
+        swaymsg "workspace $WS_NAME"
+        ;;
+    *)
+        echo "Usage: sway-new-workspace.sh {focus|movefocus}"
+        exit 1
+        ;;
+esac
