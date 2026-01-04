@@ -222,7 +222,7 @@ client.placeholder      #181929 #181929 #000000 #181929 #181929
 
 # =================================================================
 # Smart gaps: remove outer gaps if only one window
-smart_gaps on
+smart_gaps off
 
 #hide titlebars
 #for_window [class="^.*"] border pixel 0
