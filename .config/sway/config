@@ -239,6 +239,10 @@ for_window [class="^.*"] opacity 0.85
 for_window [class="^.*"] opacity_inactive 0.80
 #for_window [inactive] opacity 0.9
 
+# This targets the bar and the launcher specifically
+layer_effects "waybar" blur enable; shadows enable
+layer_effects "wofi" blur enable; shadows enable
+
 
 #shadows
 shadows enable
