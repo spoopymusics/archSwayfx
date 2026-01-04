@@ -1,0 +1,119 @@
+
+* {
+    /* Keeping Terminess for that sharp industrial look */
+    font-family: "Terminess Nerd Font", "monospace";
+    border-radius: 0;
+    font-size: 16px;
+    padding: 0px;
+    background: transparent;
+}
+
+window#waybar {
+    /* Arctic Navy Background */
+    background-image: linear-gradient(to bottom, #151921 100%);
+    border-radius: 0px;
+    padding: 0px;
+    border-style: none;
+    /* Glacial blue bottom accent line */
+    border-bottom: 2px solid #81A1C1;
+}
+
+#battery,
+#network,
+#memory,
+#cpu,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+/* Darker slate/navy for the modules */
+background-image: linear-gradient(to bottom, #1B212C 100%);
+
+margin: 6px;
+margin-right: 0px;
+padding: 4px 10px;
+border-radius: 0px;
+/* Frosted White text */
+color: #D8DEE9;
+
+border-style: none;
+transition-duration: 120ms;
+}
+
+#clock {
+margin-right: 6px;
+}
+
+/* Hover effects using Glacial Blue */
+#pulseaudio:hover,
+#custom-applauncher:hover {
+background-image: linear-gradient(to bottom, #81A1C1 100%);
+color: #151921;
+transition-duration: 120ms;
+}
+
+#custom-applauncher {
+font-weight: bold;
+color: #88C0D0; /* Frost Cyan accent */
+}
+
+#tray menu {
+background-color: #151921;
+color: #D8DEE9;
+padding: 4px;
+}
+
+#tray menu menuitem {
+background-image: linear-gradient(to bottom, #1B212C 100%);
+margin: 3px;
+color: #D8DEE9;
+border-radius: 0px;
+border-style: solid;
+border-color: #1B212C;
+}
+
+#tray menu menuitem:hover {
+color: #81A1C1;
+font-weight: bold;
+}
+
+/* Workspace Navigation Styling */
+#workspaces button {
+transition-duration: 100ms;
+all: initial;
+min-width: 0;
+font-weight: bold;
+color: #4C566A; /* Dimmed Steel Grey for inactive */
+margin-right: 0.2cm;
+margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+transition-duration: 120ms;
+color: #88C0D0;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+color: #81A1C1; /* Glacial Blue */
+font-weight: bold;
+border-bottom: 2px solid #81A1C1;
+}
+
+#workspaces button.urgent {
+color: #BF616A; /* Arctic Red for urgency */
+}
+
+/* Battery Logic */
+#battery {
+background-image: linear-gradient(to bottom, #1B212C 100%);
+color: #A3BE8C; /* Arctic Green for healthy battery */
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+color: #D8DEE9;
+background-image: linear-gradient(to bottom, #BF616A 100%);
+}

@@ -1,0 +1,73 @@
+* {
+font-family: "Terminess Nerd Font", "monospace";
+font-size: 16px;
+background: transparent;
+color: #D8DEE9; /* Arctic Frost White */
+}
+
+#window {
+color: #D8DEE9;
+/* Glacial Blue border */
+border-color: #81A1C1;
+border-style: solid;
+border-width: 2px;
+
+/* Updated to the Arctic Navy background */
+background-image: linear-gradient(to bottom, #151921 100%);
+border-radius: 0px;
+}
+
+#scroll {
+border-top-style: solid;
+border-width: 1px;
+border-color: #4C566A; /* Steel Grey separator */
+}
+
+#inner-box {
+padding-top: 12px;
+}
+
+#entry {
+border-style: none;
+color: #D8DEE9;
+padding: 6px;
+margin-bottom: 8px;
+margin-left: 12px;
+margin-right: 12px;
+border-radius: 4px; /* Reduced for a sharper industrial look */
+}
+
+#entry:selected {
+/* Selection is now the prominent Glacial Blue */
+background: #81A1C1;
+color: #151921; /* Dark text on light blue background for contrast */
+font-weight: bold;
+outline: none;
+}
+
+#input {
+background-color: #1B212C; /* Slightly lighter navy for input */
+color: #D8DEE9;
+border-color: #4C566A;
+
+border-style: none;
+border-bottom-style: solid;
+border-width: 1px;
+
+font-style: normal;
+border-radius: 0px; /* Sharp corners fit Terminus better */
+padding: 12px;
+margin: 8px;
+}
+
+#input:focus {
+background-color: #2E3440;
+/* Focus accent is now Bright Frost Blue */
+border-color: #88C0D0;
+font-style: normal; /* Italic can sometimes break bitmap fonts like Terminus */
+}
+
+#img {
+padding: 4px;
+margin-right: 6px;
+}
